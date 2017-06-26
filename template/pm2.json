@@ -1,0 +1,26 @@
+{
+  "apps": [
+    {
+      "name": "koa2-app",
+      // The entry point to the compiled version of the app
+      "script": "start.js",
+      // In production, we don't want to watch for changes in files
+      "watch": false,
+      // Merge logs from all instances
+      "merge_logs": true,
+      // We want to timestamp log messages
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "env": {
+        // And include environment variables for the app
+        "NODE_ENV": "production",
+        "PORT": 4000
+      },
+      // Start two processes of the app, and balance the load between them
+      "instances": 2,
+      // Start app as a cluster
+      "exec_mode": "cluster_mode",
+      // Watch failures and auto-restart processes
+      "autorestart": true
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "koa2app",
+  "version": "1.0.0",
+  "description": "A boilerplate based on koa2",
+  "main": "start.js",
+  "scripts": {
+    "dev": "nodemon start.js",
+    "pm2": "pm2 start start.js"
+  },
+  "keywords": [
+    "koa2",
+    "RESTful",
+    "template engine",
+    "async/await"
+  ],
+  "author": "luyao",
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "bluebird": "^3.5.0",
+    "kcors": "^2.2.1",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compose": "^4.0.0",
+    "koa-compress": "^2.0.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.0.0",
+    "koa-onerror": "^3.1.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.0.2",
+    "mongoose": "^4.10.7",
+    "pug": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

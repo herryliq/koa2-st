@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+var fs = require('fs-extra')
+var prompt = require('prompt')
+var path = require('path')
+
+var schema = {
+  properties: {
+    dirname: {
+      description: 'Input project directory name',
+      required: true,
+      default: 'koa2app'
+    }
+  }
+}
+
+prompt.start()
+
+prompt.get(schema, function(err, result) {
+  if (err) throw err
+  generateTemplate(result.dirname)
+})
+
+function generateTemplate(dirname, type) {
+  try {
+    const template = path.join(__dirname, '..', 'template')
+    var project = `${process.cwd()}/${dirname}`
+    fs.copySync(template, dirname)
+    console.log(`Generate ${dirname} at ${process.cwd()}/${dirname}`)
+    console.log(`cd ${dirname} && npm install`)
+    console.log(`you can also use yarn to install it`)
+    console.log('use npm run dev to start it')
+  } catch (e) {
+    console.error(e)
+  }
+}
