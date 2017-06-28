@@ -11,11 +11,12 @@ sudo npm i koa2-st -g
 ```
 
 ## Usage
-全局安装koa2-st, 之后使用koa2命令即可在当前目录一键生成服务端程序。地址为：当前目录/koa2-st
+全局安装koa2-st后, 使用`kst`命令即可在当前目录生成服务端程序  
+地址: ${workspaceDir}/${projectName}
 ```bash
 kst
 
-cd koa2-st && npm i #建议使用 nrm 管理npm安装源
+cd koa2-st && npm i #建议使用 nrm 管理 npm 安装源
 ```
 
 ## Stack

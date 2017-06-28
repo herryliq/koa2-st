@@ -1,6 +1,6 @@
 {
   "name": "koa2-st",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A quickly build web services toolkit",
   "bin": {
     "kst": "bin/www"

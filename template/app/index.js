@@ -9,9 +9,9 @@ import serve from 'koa-static'
 import views from 'koa-views'
 import path from 'path'
 
+import './models'
 import router from './routes'
 import middleware from './middlewares'
-import './models'
 import config from '../config/default'
 
 const PORT = process.env.PORT || config.app.port
@@ -26,7 +26,7 @@ app.use(async (ctx, next) => {
   await next()
   execTime = new Date().getTime() - start
   ctx.response.set('X-Response-Time', `${execTime}ms`)
-  ctx.response.set('X-Powered-By', 'Koa2-st')
+  ctx.response.set('X-Powered-By', 'Koa2')
 })
 
 onerror(app)
